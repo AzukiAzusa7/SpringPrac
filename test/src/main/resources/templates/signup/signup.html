@@ -6,9 +6,8 @@
 </head>
 
 <body>
-	<h3>login</h3>
-	<p th:if="${param.error}">Error!</p>
-	<form th:action="@{/login}" method="POST">
+	<h3>signup</h3>
+	<form th:action="@{/signup}" method="POST">
 		<table>
 			<tr>
 				<td><label for="username">User:</label></td>
@@ -20,9 +19,9 @@
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
-				<td><button type="submit">login</button></td>
+				<td><button type="submit">signup</button></td>
 			</tr>
-			<a th:href="@{/signup}">signup</a>
+			<a th:href="@{/login}">back</a>
 		</table>
 	</form>
 </body>

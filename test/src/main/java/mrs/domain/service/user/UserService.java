@@ -15,4 +15,11 @@ public class UserService{
 		userProfile.setNickName(userUpdateRequest.getNickName());
 		userRepository.save(userProfile);
 	}
+	public void save(UserRequest userRequest){
+		User user = new User();
+		user.setUserId(userRequest.getUserId);
+		user.setPassword(userRequest.serUserPassword);
+		user.serRoleName("USER");
+		userRepository.save(user);
+	}
 }
